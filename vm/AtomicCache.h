@@ -136,10 +136,8 @@ struct AtomicCache {
          * boost.                                                           \
          */                                                                 \
         value = (u4) ATOMIC_CACHE_CALC;                                     \
-        if (value == 0 && ATOMIC_CACHE_NULL_ALLOWED) { \
-            dvmUpdateAtomicCache((u4) (_key1), (u4) (_key2), value, pEntry, \
-                        firstVersion CACHE_XARG(_cache) ); \
-        } \
+        dvmUpdateAtomicCache((u4) (_key1), (u4) (_key2), value, pEntry,     \
+                    firstVersion CACHE_XARG(_cache) );                      \
     }                                                                       \
     value;                                                                  \
 })

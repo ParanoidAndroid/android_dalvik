@@ -242,7 +242,6 @@ int dvmInstanceofNonTrivial(const ClassObject* instance,
     const ClassObject* clazz)
 {
 #define ATOMIC_CACHE_CALC isInstanceof(instance, clazz)
-#define ATOMIC_CACHE_NULL_ALLOWED true
     return ATOMIC_CACHE_LOOKUP(gDvm.instanceofCache,
                 INSTANCEOF_CACHE_SIZE, instance, clazz);
 #undef ATOMIC_CACHE_CALC
